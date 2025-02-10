@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Academy</title>
+    <!-- css се дърпа от node_mudules папката -->
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- icons -->
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- vanilla css -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- вграден js който помага за падащото меню -->
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+    <!-- navbar START -->
+    <nav class="navbar navbar-dark bg-dark">
+        <!-- container-fluid -> Този клас се използва за създаване на контейнер, който заема цялата ширина на екрана, като се адаптира към различни размери на екрана. -->
+        <div class="container-fluid">
+            <!-- "navbar-toggler" -> Този клас се използва за създаване на бутон, който при натискане показва или скрива съдържанието на навигационната лента -->
+            <!-- Атрибутите data-bs-toggle и data-bs-target се използват за управление на поведението на елемента с Bootstrap -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- navbar-brand -> Този клас се използва за стилизиране на логото или името на марката в навигационната лента -->
+            <a class="navbar-brand" href="#">IT Academy</a>
+        </div>
+    </nav>
+    <!-- navbar END -->
+
+    <!-- sidebar START -->
+    <div class="collapse sidebar" id="sidebarMenu">
+        <a href="#" class="active">Dashboard</a>
+        <!--href="profile.html-> пренасочва към тази страница -->
+        <a href="profile.html">User Profile</a>
+        <a href="#">Maps</a>
+        <a href="#">Notifications</a>
+        <a href="#">Support</a>
+    </div>
+    <!-- sidebar END -->
+
+    <div class="main-content">
+        <h2>Dashboard</h2>
+        <!-- Четири колони -->
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card card-background-1">
+                    <div class="card-body">PEOPLE TRAINED <br>
+                        <h4>150+</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card card-background-2">
+                    <div class="card-body">HOURS INVESTED <br>
+                        <h4>12 000+</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card card-background-3">
+                    <div class="card-body">YEARS HISTORY <br>
+                        <h4>2+</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card card-background-4">
+                    <div class="card-body">TECHNICAL TRAINERS <br>
+                        <h4>20+</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Край на четирите колони -->
+
+        <!-- Три колони -->
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card border border-dark">
+                    <div class="card-header bg-info text-dark border border-dark">Daily Sales</div>
+                    <div class="card-body">55% increase in today sales</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border border-dark">
+                    <div class="card-header bg-info text-dark border border-dark">Email</div>
+                    <div class="card-body">itacademy@gmail.com</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border border-dark">
+                    <div class="card-header bg-info text-dark border border-dark">Completed Tasks</div>
+                    <div class="card-body">Last Campaign Performance</div>
+                </div>
+            </div>
+        </div>
+        <!-- Край на трите колони -->
+        <div class="d-flex align-items-center justify-content-between">
+            <!-- Таблица 1 -->
+            <div class="col-6 pe-2">
+                <table class="table my-4">
+                    <thead>
+                        <tr>
+                            <th scope="col"><i class="bi bi-patch-plus-fill"></i></th>
+                            <th scope="col" class="ps-5">Technical Trainers</th>
+                            <th scope="col">email</th>
+                            <th scope="col">username</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><i class="bi bi-patch-plus-fill"></i></th>
+                            <td class="ps-5">Mark</td>
+                            <td>mark@info.com</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><i class="bi bi-patch-plus"></i></th>
+                            <td class="px-5">Jacob</td>
+                            <td>j@info.com</td>
+                            <td>@jb</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><i class="bi bi-patch-plus-fill"></i></th>
+                            <td colspan="2" class="ps-5">Larry the Bird</td>
+                            <td>@larry</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- Край на таблицата -->
+            </div>
+
+            <div class="col-6 ps-2 my-4">
+                <!-- Таблица 2 -->
+                <table class="table my-4">
+                    <thead>
+                        <tr>
+                            <th scope="col"><i class="bi bi-patch-plus-fill"></i></th>
+                            <th scope="col" class="ps-5">Course</th>
+                            <th scope="col">Duration</th>
+                            <th scope="col">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><i class="bi bi-patch-plus-fill"></i></th>
+                            <td class="ps-5"> Full-Stack</td>
+                            <td>3 months</td>
+                            <td>€600</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><i class="bi bi-patch-plus"></i></th>
+                            <td class="ps-5">MongoDB</td>
+                            <td>1 months</td>
+                            <td>€300</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><i class="bi bi-patch-plus-fill"></i></th>
+                            <td class="ps-5">React</td>
+                           <td>8 months</td>
+                            <td>€750</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- Край на таблицата -->
+            </div>
+        </div>
+
+    </div>
+   
+    <!-- Footer START -->
+    <footer class="my-4">
+        <hr>
+        <div class="container text-center">
+            <p>© 2025 IT Academy. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- Footer END -->
+</body>
+
+</html>
