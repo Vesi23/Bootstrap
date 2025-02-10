@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ad's Board</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+    <!-- Step 1-> add header -->
+    <!-- Клас "bg-light" задава светъл фонов цвят на хедъра. 
+         Клас "py-3" добавя вертикални вътрешни отстояния (padding) от 1rem отгоре и отдолу. -->
+    <header class="bg-light py-3">
+        <!-- "container" осигурява фиксирана ширина и центрира съдържанието.
+             "d-flex" активира Flexbox, за подравняване на елементите.
+             "justify-content-between" разпределя елементите по ширината, оставяйки празно място между тях.
+             "align-items-center" подравнява елементите по вертикалата в центъра. -->
+        <div class="container d-flex justify-content-between py-0">
+            <!--  "mb-0" премахва долния марджин (margin) по подразбиране -->
+            <div class="d-flex align-items-center justify-content-start">
+                <img src="/images/ad.png" alt="Ad's Board" class="logo  mx-1" height="50">
+                <!-- mb-0 премахва долния марджин (margin) по подразбиране -->
+                <h1 class="h4 mb-0 ">AD'S BOARD</h1>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-end ">
+                <!-- "btn" е базовият клас за стилизиране на бутон.
+                 "btn-warning" задава жълт цвят на бутона.
+                 "me-2" добавя десен марджин (margin) от 0.5rem. -->
+                <button class="btn btn-warning mx-3">+ New ad</button>
+                <img src="/images/av_64.png" alt="User" class="user">
+                <!-- "btn" стилизира елемента като бутон.
+                 "btn-outline-secondary" задава рамка и текст със сив цвят, без запълване. -->
+                <a href="#">My profile</a>
+            </div>
+    </header>
+    <!-- Step 2-> add main -->
+    <main>
+        <!-- Лента за търсене -->
+        <div class="container my-2 background  ">
+            <!-- The row class is used to create a horizontal group of columns. -->
+            <div class="row">
+                <!-- col-md-7 -> p. Той се използва за създаване на оформлението на страницата с помощта на мрежова система (grid system).
+По-конкретно, класът col-md-7 означава, че елементът ще заема 7 от 12 колони на мрежата, когато екранът е със среден размер (medium) или по-голям. Средният размер на екрана в Bootstrap е дефиниран като ширина на екрана от 768 пиксела или повече. -->
+                <div class="col-md-7">
+                    <input type="text" class="form-control" placeholder="11 999 345 ads near you">
+                </div>
+                <!-- col-md-3-> Този клас означава, че елементът ще заема 3 от 12 колони на мрежата, когато екранът е със среден размер (medium) или по-голям. -->
+                <div class="col-md-3">
+                    <input type="text" class="form-control" placeholder="Kiev, Kiev area">
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-primary w-100">Search</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Категории -->
+        <div class="row my-5 mx-5 px-5">
+            <!-- col-6 -> Този клас означава, че елементът ще заема 6 от 12 колони на мрежата, когато екранът е със среден размер (medium) или по-голям. -->
+            <!-- col-md-3 -> Този клас означава, че елементът ще заема 3 от 12 колони на мрежата, когато екранът е със среден размер (medium) или по-голям. -->
+            <div class="col-6 col-md-3 mb-3">
+                <div class="d-flex align-items-center my-0">
+                    <!-- text-dange or text-warning or ...-> добавя цвят -->
+                    <i class="bi bi-people category-icon mx-2 text-danger" style="font-size: 2.5rem;"></i>
+                    <p class="my-0">Children's</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+                <div class="d-flex align-items-center my-0">
+                    <i class="bi bi-house category-icon mx-2 text-info" style="font-size: 2.5rem;"></i>
+                    <p class="my-0">Property</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+                <div class="d-flex align-items-center my-0">
+                    <i class="bi bi-truck category-icon mx-2 text-warning" style="font-size: 2.5rem;"></i>
+                    <p class="my-0">Transport</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+                <div class="d-flex align-items-center my-0">
+                    <i class="bi bi-gear category-icon mx-2 text-primary" style="font-size: 2.5rem;"></i>
+                    <p class="my-0">Spare parts for cars</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+                <div class="d-flex align-items-center my-0">
+                    <i class="bi bi-briefcase category-icon mx-2 text-primary" style="font-size: 2.5rem;"></i>
+                    <p class="my-0">Jobs</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+                <div class="d-flex align-items-center my-0">
+                    <i class="bi bi-briefcase category-icon mx-2 text-danger" style="font-size: 2.5rem;"></i>
+                    <p class="my-0">Animals</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+                <div class="d-flex align-items-center my-0">
+                    <i class="bi bi-house-door category-icon mx-2 text-info" style="font-size: 2.5rem;"></i>
+                    <p class="my-0">House & garden</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+                <div class="d-flex align-items-center my-0">
+                    <i class="bi bi-phone category-icon mx-2 text-warning" style="font-size: 2.5rem;"></i>
+                    <p class="my-0">Phones, Tablets & PCs</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+                <div class="d-flex align-items-center my-0">
+                    <i class="bi bi-tools category-icon mx-2 text-info" style="font-size: 2.5rem;"></i>
+                    <p class="my-0">Business & services</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+                <div class="d-flex align-items-center my-0">
+                    <i class="bi bi-phone category-icon mx-2 text-warning" style="font-size: 2.5rem;"></i>
+                    <p class="my-0">Fashion & style</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+                <div class="d-flex align-items-center my-0">
+                    <i class="bi bi-bicycle category-icon mx-2 text-primary" style="font-size: 2.5rem;"></i>
+                    <p class="my-0">Hobbies, recreation & sports</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+                <div class="d-flex align-items-center my-0">
+                    <i class="bi bi-gift category-icon mx-2 text-danger" style="font-size: 2.5rem;"></i>
+                    <p class="my-0">Gifts</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Step 3-> add footer -->
+    <footer class="bg-light py-4">
+        <div class="container d-flex justify-content-between align-items-center ">
+            <img src="/images/ad_bw.png" alt="Ad's Board" class="my-5 mx-5" height="80">
+            <div class="row w-100">
+                <!-- col-12-> Този клас означава, че елементът ще заема всички 12 колони на мрежата, когато екранът е с малък размер (small) или по-голям. -->
+                <div class="col-12 col-md-4 mb-3">
+                    <!-- text-primary -> Този клас дава цвят на текста -->
+                    <a href="#" class="d-block text-primary mb-2">Mobile applications</a>
+                    <a href="#" class="d-block text-primary mb-2">Paid services</a>
+                    <a href="#" class="d-block text-primary mb-2">Advertising on the website</a>
+                    <a href="#" class="d-block text-primary mb-2">For the press</a>
+                    <a href="#" class="d-block text-primary mb-2">Help and Feedback</a>
+                </div>
+                <div class="col-12 col-md-4 mb-3">
+                    <a href="#" class="d-block text-primary mb-2">AD'S BOARD blog</a>
+                    <a href="#" class="d-block text-primary mb-2">Safety regulations</a>
+                    <a href="#" class="d-block text-primary mb-2">How to sell and buy?</a>
+                    <a href="#" class="d-block text-primary mb-2">Terms of Use</a>
+                    <a href="#" class="d-block text-primary mb-2">Partners</a>
+                </div>
+                <div class="col-12 col-md-4 mb-3">
+                    <a href="#" class="d-block text-primary mb-2">Work at AD'S BOARD</a>
+                    <a href="#" class="d-block text-primary mb-2">Popular Searches</a>
+                    <a href="#" class="d-block text-primary mb-2">Map of Regions</a>
+                    <a href="#" class="d-block text-primary mb-2">Advertising preferences</a>
+                    <a href="#" class="d-block text-primary mb-2">Site Map</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
